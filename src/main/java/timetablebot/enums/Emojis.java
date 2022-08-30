@@ -7,6 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum Emojis {
+    //https://emojipedia.org/
+
     GRINNING_FACE(EmojiParser.parseToUnicode(":grinning:")),
     ALARM_CLOCK(EmojiParser.parseToUnicode(":alarm_clock:")),
     SMILING_FACE(EmojiParser.parseToUnicode(":relaxed:")),
