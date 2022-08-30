@@ -1,2 +1,6 @@
 request:
   address: "http://localhost:8080/"
+
+telegram:
+  token: "5409804968:AAEWZK612pjFspAvfneZ4fRcelbbqb8vAo0"
+  name: "Ksu_timetable_bot"
