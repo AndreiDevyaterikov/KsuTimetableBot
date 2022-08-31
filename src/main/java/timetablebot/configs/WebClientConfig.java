@@ -31,7 +31,6 @@ public class WebClientConfig {
                 .doOnConnected(conn ->
                         conn.addHandlerLast(new ReadTimeoutHandler(5000, TimeUnit.MILLISECONDS))
                                 .addHandlerLast(new WriteTimeoutHandler(5000, TimeUnit.MILLISECONDS)));
-        System.out.println(baseUrl);
 
         return WebClient.builder()
                 .baseUrl(baseUrl)
