@@ -27,7 +27,6 @@ public class TextMaker {
         }
         if (messageText.matches("[0-9]{2}-[А-Я]{1,2}[б|м][о|з]-[0-9]")) {
             var lessonsToday = requestService.getLessonsToday(messageText);
-            System.out.println(lessonsToday);
             StringBuilder text = new StringBuilder();
             for (var lessonToday : lessonsToday) {
                 text.append("Предмет: ")
