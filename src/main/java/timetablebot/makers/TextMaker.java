@@ -3,18 +3,18 @@ package timetablebot.makers;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import timetablebot.enums.Emojis;
-import timetablebot.services.RequestService;
+import timetablebot.services.RequestServiceImpl;
 
 @Component
 @AllArgsConstructor
 public class TextMaker {
 
-    private final RequestService requestService;
+    private final RequestServiceImpl requestServiceImpl;
 
     public String getText(String messageText) {
 
         if (messageText.equals("/faculties")) {
-            var faculties = requestService.getFaculties();
+            var faculties = requestServiceImpl.getFaculties();
             StringBuilder message = new StringBuilder();
             for (var faculty : faculties) {
                 message.append(faculty.getTitle());
@@ -26,7 +26,7 @@ public class TextMaker {
             return "Введите название группы";
         }
         if (messageText.matches("[0-9]{2}-[А-Я]{1,2}[б|м][о|з]-[0-9]")) {
-            var lessonsToday = requestService.getLessonsToday(messageText);
+            var lessonsToday = requestServiceImpl.getTodayLessonsForGroup(messageText);
             StringBuilder text = new StringBuilder();
             for (var lessonToday : lessonsToday) {
                 text.append("Предмет: ")

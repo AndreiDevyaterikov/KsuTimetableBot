@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Data
 @Getter
-public class Timetable {
+public class Lesson {
 
     private Integer id;
     private Integer lessonDay;

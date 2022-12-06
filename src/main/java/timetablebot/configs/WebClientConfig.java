@@ -19,8 +19,8 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${request.address}")
-    String baseUrl;
+    @Value("${request.url}")
+    String url;
 
     @Bean
     WebClient getWebClient() {
@@ -33,12 +33,10 @@ public class WebClientConfig {
                                 .addHandlerLast(new WriteTimeoutHandler(5000, TimeUnit.MILLISECONDS)));
 
         return WebClient.builder()
-                .baseUrl(baseUrl)
+                .baseUrl(url)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-                .defaultUriVariables(Collections.singletonMap("url", baseUrl))
+                .defaultUriVariables(Collections.singletonMap("url", url))
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
                 .build();
-
     }
-
 }
