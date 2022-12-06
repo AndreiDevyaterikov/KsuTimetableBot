@@ -7,7 +7,6 @@ import lombok.Getter;
 @Data
 @Getter
 public class Lesson {
-
     private Integer id;
     private Integer lessonDay;
     private String lessonName;
@@ -20,5 +19,4 @@ public class Lesson {
     private Group group;
     private String typeWeek;
     private String subgroup;
-
 }

@@ -8,6 +8,5 @@ import lombok.Getter;
 public class Cabinet {
     private String id;
     private String title;
-
 }
 

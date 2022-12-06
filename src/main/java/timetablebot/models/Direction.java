@@ -9,5 +9,4 @@ import lombok.Getter;
 public class Direction {
     private String id;
     private String title;
-
 }

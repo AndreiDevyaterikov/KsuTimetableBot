@@ -1,10 +1,11 @@
-package timetablebot.services;
+package timetablebot.services.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import timetablebot.models.Faculty;
 import timetablebot.models.Lesson;
+import timetablebot.services.RequestService;
 
 import java.util.List;
 

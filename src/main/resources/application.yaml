@@ -2,5 +2,5 @@ request:
   url: "http://localhost:8082/"
 
 telegram:
-  token: "5409804968:AAFLYflmdptawZCrC5D0UaKNwGCVcCWRzFo"
-  name: "Ksu_timetable_bot"
+  token: "5897498135:AAF_oPDAvkJAlaYiYCOo-ZE0wheT3U9eaZY"
+  name: "KsuTimetableBot"
